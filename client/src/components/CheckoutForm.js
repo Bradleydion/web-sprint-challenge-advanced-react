@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import {useForm} from "../hooks/useForm"
 
-export default function CheckoutForm () {
+const CheckoutForm =() => {
   const initialValue = {
     firstName: "",
     lastName: "",
@@ -52,7 +52,7 @@ return (
           Zip:
           <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
-        <button>Checkout</button>
+        <button name="Checkout">Checkout</button>
       </form>
 
       {showSuccessMessage && (
@@ -75,3 +75,4 @@ return (
     </>
   );
 };
+export default CheckoutForm
